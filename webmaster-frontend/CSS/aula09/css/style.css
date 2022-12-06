@@ -1,0 +1,17 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html, body{
+    height: 100%;
+}
+
+.article{
+    margin: 0 auto;
+    max-width: 1280px;
+    height: 10%;    
+    max-height: 20%;
+    min-height: 50%;
+    background-color: red;
+}

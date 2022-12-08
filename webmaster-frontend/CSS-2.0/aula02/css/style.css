@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html, body{
+    height: 100%;
+}
+
+.text[type='text']{
+    background-color: green;
+}
+
+input[type='submit']{
+    background-color: blue;
+}
+
+/* a[href='https://www.google.com']{
+    background-color: yellow;
+}
+
+[href='https://www.google.com']{
+    background-color: red;
+} */
+
+/* a[href*='google'], a[href*='danki']{
+    background-color: yellow;
+} */
+
+/* 
+a[attr~="google"]{
+    background-color: blue;
+} */
+
+/* a[attr|="google"]{
+    background-color: yellow;
+} */
+
+/* a[attr^="goo"]{
+    background-color: red;
+} */
+
+a[attr$="google"]{
+    background-color: yellow;
+}

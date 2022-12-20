@@ -1,0 +1,49 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html, body{
+    height: 100%;
+}
+
+/* .bg{
+    width: 100%;
+    margin: 0 auto;
+    height: 30vh;
+    background-color: red;
+    background-size: cover;
+    background-image: url('../imagens/paisagem.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    
+    background-size: 70px 70px;
+    background-repeat: no-repeat;
+    background-position: center; 
+} */
+
+.box{
+    width: 900px;
+    margin: 80px auto;
+    text-align: center;
+    background-color: rgb(200, 200, 200);
+}
+
+.item {
+    width: 33.3%;
+    margin-right: -4px;
+    display: inline-block;
+}
+
+.item img{
+    width: 100%;
+}
+
+.item p{
+    display: inline-block;
+    text-align: left;
+}
+
+.last{
+    margin-right: 0;
+}

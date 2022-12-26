@@ -43,3 +43,18 @@ ul li:nth-of-type(2){
 .box div:not(.one){
     background-color: gold;
 }
+
+p:empty{
+    width: 200px;
+    height: 200px;
+    background-color: orange;
+}
+
+/* .p::after{
+    content: " Guilherme";
+    background-color: red;
+} */
+
+.p::before{
+    content: 'Guilherme ';
+}

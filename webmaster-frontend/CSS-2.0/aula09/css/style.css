@@ -37,8 +37,25 @@ form input[type=text]:focus{
 }
 
 form select{
-    width: 80%;
+    width: calc(80% + 26px);
     margin-top: 30px;
     padding: 10px 13px;
     display: inline-block;
+}
+
+form h2{
+    margin-top: 20px;
+    color: rgb(100, 100, 100);
+}
+
+.input{
+    display: inline-block;
+    text-align: left;
+    margin-top: 20px;
+}
+
+.input span{
+    margin-left: 13px;
+    font-size: 16px;
+    color: rgb(130, 130, 130);
 }

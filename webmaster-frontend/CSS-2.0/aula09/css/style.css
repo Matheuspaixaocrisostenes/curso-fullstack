@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html, body{
+    height: 100%;
+}
+
+form{
+    width: 96%;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+form fieldset{
+    padding: 20px 40px;
+    border: 1px solid #ccc;
+}
+
+form legend{
+    text-align: left;
+    font-size: 17px;   
+    color: rgb(130, 130, 130);
+}
+
+form input[type=text]{
+    display: inline-block;
+    margin-top: 40px;
+    width: 80%;
+    padding: 10px 13px;
+}
+
+form input[type=text]:focus{
+    outline: 0;
+}
+
+form select{
+    width: 80%;
+    margin-top: 30px;
+    padding: 10px 13px;
+    display: inline-block;
+}

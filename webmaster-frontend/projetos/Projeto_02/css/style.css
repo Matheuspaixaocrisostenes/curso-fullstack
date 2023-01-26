@@ -51,7 +51,7 @@ header{
 		text-align: center;
 	}
 
-	.logo-1,.logo-2{
+	[class^="logo"]{
 		margin-top:10px;
 		display: inline-block;
 		float: none;

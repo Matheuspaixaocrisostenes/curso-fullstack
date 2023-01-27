@@ -126,7 +126,7 @@ section.chamada{
 
 section.chamada .container{
 	padding: 50px 0;
-	background-color: #7c6757;
+	background-color: #025774;
 }
 
 section.chamada h2{
@@ -136,6 +136,11 @@ section.chamada h2{
 	color: white;
 	font-size: 26px;
 	font-weight: normal;
+}
+
+section.chamada p{
+	font-size: 20px;
+	color: white;
 }
 
 @media screen and (max-width: 510px){

@@ -48,26 +48,24 @@ header{
 
 section.cover-form{
 	width: 100%;
-	padding: 0 2%;
 }
 
 .bg{
-	height: 500px;
+	position: relative;
+	height: 560px;
 	background-size: cover;
 	background-position: center;
 	background-image: url('../imagens/bg-form.jpg');
 }
 
 .form-container{
-	float: right;
-	margin-right: 40px;
+	position: absolute;
+	right: 30px;
+	top: -2.5%;
 	width: 400px;
-	height: 110%;
-	position: relative;
-	top: -5%;
+	height: 105%;
 	background-color: white;
 	box-shadow: 1px 1px 2px 1px rgb(180, 180, 180);
-	z-index: 2;
 }
 
 .form-container h2{
@@ -79,7 +77,7 @@ section.cover-form{
 }
 
 .form-container form{
-	margin-top: 8px;
+	margin-top: 20px;
 	padding: 15px;
 }
 
@@ -118,29 +116,48 @@ section.cover-form{
 section.chamada{
 	width: 100%;
 	text-align: center;
-	display: inline-block;
-	position: relative;
-	top: -50px;
 	z-index: 1;
 }
 
 section.chamada .container{
-	padding: 50px 0;
-	background-color: #025774;
+	background-color: #29526d;
+	padding: 70px 0 50px 0;
 }
 
 section.chamada h2{
-	width: 96%;
+	width: 98%;
 	max-width: 700px;
 	display: inline-block;
 	color: white;
-	font-size: 26px;
+	font-size: 24px;
 	font-weight: normal;
+	text-transform: uppercase;
 }
 
 section.chamada p{
-	font-size: 20px;
+	width: 98%;
+	max-width: 700px;	
+	display: inline-block;
 	color: white;
+	margin-top: 10px;
+	font-size: 18px;
+	font-weight: normal;
+}
+
+@media screen and (max-width: 960px) {
+	.bg{
+		height: auto;
+		padding: 40px 0;
+		text-align: center;
+	}
+
+	.form-container{
+		height: auto;
+		width: 96%;
+		max-width: 400px;
+		position: static;
+		display: inline-block;
+	}
 }
 
 @media screen and (max-width: 510px){

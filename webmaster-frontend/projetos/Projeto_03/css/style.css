@@ -107,6 +107,18 @@ section.sessao1  .container{
     width: 100%;
 }
 
+.btn1-texto{
+    background-color: #FF703D;
+    width: 165px;
+    height: 44px;
+    color: white;
+    cursor: pointer;
+    margin-top: 10px;
+    text-align: center;
+    line-height: 44px;
+    border-radius: 30px;
+}
+
 .device-sessao1{
     float: left;
     width: 50%;

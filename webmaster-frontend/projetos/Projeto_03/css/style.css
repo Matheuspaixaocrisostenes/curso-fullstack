@@ -228,7 +228,7 @@ section.sessao1 .container{
 .wraper-part1{
 	max-width: 600px;
 	float: right;
-	padding-right: 30px;
+	padding: 0 30px;
 }
 
 .parte1 h2{
@@ -391,5 +391,22 @@ section.sessao1 .container{
 
 	.sessao2{
 		padding: 40px 2%;
+	}
+}
+
+@media screen and (max-width: 580px) {
+	.parte1{
+		width: 100%;
+		padding: 40px 0;
+	}
+	
+	.parte2{
+		width: 100%;
+		padding: 40px 0;
+	}
+
+	.sessao2 img{
+		top: 16px;
+		margin-top: 20px;
 	}
 }

@@ -31,8 +31,30 @@ header .logo img{
 }
 
 nav.menu-mobile{
-	display: none;
 	float: right;
+	width: 28px;
+	height: 28px;
+	cursor: pointer;
+	margin-top: 7px;
+	background-image: url('../imagens/menu-mobile.png');
+	background-size: 100% 100%;
+	display: none;
+}
+
+nav.menu-mobile ul{
+	display: none;
+	z-index: 999;
+	text-align: center;
+	width: 100%;
+	position: absolute;
+	left: 0;
+	top: 60px;
+	background-color: white;
+}
+
+nav.menu-mobile ul li{
+	padding: 10px 0;
+	text-transform: uppercase;
 }
 
 header nav.menu-desktop{
@@ -175,6 +197,22 @@ section.perfil-container .texto-perfil p{
 	font-size: 14px;
 	margin-top: 8px;
 }
+/* *** */
+
+/* videos */
+
+section.videos{
+	padding: 50px 0;
+}
+
+section.videos .box-video{
+	float: left;
+	width: 33.3%;
+	/* background-color: green; */
+	padding-top: calc(33.3% * 0.6);
+}
+
+/* *** */
 
 /* parte do responsivo */
 

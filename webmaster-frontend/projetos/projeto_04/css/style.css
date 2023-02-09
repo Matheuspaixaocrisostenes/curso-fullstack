@@ -42,7 +42,8 @@ nav.menu-mobile{
 }
 
 nav.menu-mobile ul{
-	display: none;
+	opacity: 0;
+	transition: .5s;
 	z-index: 999;
 	text-align: center;
 	width: 100%;
@@ -223,6 +224,10 @@ section.videos .box-video{
 
 	nav.menu-mobile{
 		display: block;
+	}
+
+	nav.menu-mobile:hover > ul{
+		opacity: 1;
 	}
 
 	section.servicos > .container{

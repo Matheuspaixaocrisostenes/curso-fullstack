@@ -207,8 +207,14 @@ section.perfil-container .texto-perfil p{
 		padding: 30px 2%;
 	}
 
+	section.perfil-container .perfil-wraper{
+		padding-top: 0;
+	}
+
 	section.perfil-container .perfil-wraper2{
 		/* flex-direction: column; */
+		height: auto;
+		position: static;
 		display: inline-block;
 		text-align: center;
 	}

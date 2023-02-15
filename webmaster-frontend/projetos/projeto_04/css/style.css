@@ -209,8 +209,18 @@ section.videos{
 section.videos .box-video{
 	float: left;
 	width: 33.3%;
+	position: relative;
 	/* background-color: green; */
 	padding-top: calc(33.3% * 0.6);
+	border: 5px solid white;
+}
+
+section.videos iframe{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
 }
 
 /* *** */
@@ -275,12 +285,30 @@ section.videos .box-video{
 		text-align: justify;
 		padding: 0 30px;
 	}
+
+	section.videos{
+		text-align: center;
+	}
+
+	section.videos .box-video{
+		float: none;
+		width: 70%;
+		display: inline-block;
+		/* border: 5px solid white; */
+		padding-top: calc(70% * 0.6);
+	}
 }
 
 @media screen and (max-width: 580px){
 	section.perfil-container .img-perfil{
 		width: 80%;
 		padding-top: 110%;
+	}
+
+	section.videos .box-video{
+		width: 100%;
+		/* border: 5px solid white; */
+		padding-top: calc(100% * 0.6);
 	}
 }
 

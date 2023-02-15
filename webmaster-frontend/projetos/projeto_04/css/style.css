@@ -225,6 +225,44 @@ section.videos iframe{
 
 /* *** */
 
+/* Tratamentos */
+
+section.tratamentos{
+	padding: 70px 0;
+}
+
+section.tratamentos > h2{
+	color: #698293;
+	text-align: center;
+	font-size: 18px;
+}
+
+section.tratamentos > .container{
+	padding: 80px 0;
+}
+
+section.tratamentos .tratamento-container{
+	float: left;
+	width: 33.3%;
+}
+
+.tratamento-single{
+	padding: 20px;
+}
+
+.tratamento-single h2{
+	font-size: 18px;
+	color: #737373;
+}
+
+.tratamento-single p{
+	padding: 10px 0;
+	font-size: 13px;
+	color: #b4b4b4;
+}
+
+/* *** */
+
 /* parte do responsivo */
 
 @media screen and (max-width: 768px){

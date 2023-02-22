@@ -363,6 +363,73 @@ section.depoimentos .depoimento-single{
 
 /* *** */
 
+/* Contato */
+
+section.contato{
+	padding: 60px 2%;
+}
+
+section.contato > h2{
+	color: #698293;
+	text-align: center;
+	font-size: 18px;
+}
+
+section.contato form{
+	width: 100%;
+	max-width: 500px;
+	margin: 30px auto;
+}
+
+.form-wraper{
+	float: left;
+	padding: 0 10px;
+	margin-top: 10px;
+}
+
+.w100{
+	width: 100%;
+}
+
+.w50{
+	width: 50%;
+}
+
+.form-wraper span{
+	font-size: 13px;
+	color: #b4b4b4;
+}
+
+.form-wraper input{
+	width: 100%;
+	height: 35px;
+	line-height: 35px;
+	padding-left: 9px;
+	border: 1px solid #dadada;
+	margin-top: 8px;
+}
+
+.form-wraper textarea{
+	width: 100%;
+	height: 121px;
+	padding: 8px;
+	margin-top: 8px;
+	resize: none;
+	border: 1px solid #dadada;
+}
+
+.form-wraper input[type=submit]{
+	width: 100px;
+	height: 35px;
+	border: 0;
+	background-color: #688293;
+	color: white;
+	cursor: pointer;
+	display: inline-block;
+}
+
+/* *** */
+
 /* parte do responsivo */
 
 @media screen and (max-width: 1024px){
@@ -467,6 +534,10 @@ section.depoimentos .depoimento-single{
 		width: 100%;
 		/* border: 5px solid white; */
 		padding-top: calc(100% * 0.6);
+	}
+
+	.w50{
+		width: 100%;
 	}
 }
 

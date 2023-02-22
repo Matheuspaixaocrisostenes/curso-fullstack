@@ -158,7 +158,7 @@ section.perfil-container{
 }
 
 section.perfil-container .container{
-	max-width: 800px;
+	max-width: 1000px;
 }
 
 section.perfil-container .perfil-wraper{
@@ -171,7 +171,6 @@ section.perfil-container .perfil-wraper2{
 	left: 0;
 	top: 0;
 	display: flex;
-	align-items: center;
 	width: 100%;
 	height: 100%;
 }
@@ -185,7 +184,7 @@ section.perfil-container .img-perfil{
 
 section.perfil-container .texto-perfil{
 	width: 60%;
-	padding: 0 30px;
+	padding: 20px 30px;
 }
 
 section.perfil-container .texto-perfil h2{
@@ -194,8 +193,9 @@ section.perfil-container .texto-perfil h2{
 }
 
 section.perfil-container .texto-perfil p{
-	color: #4b4b4b;
-	font-size: 14px;
+	color: rgb(190, 190, 190);
+	font-size: 15px;
+	line-height: 25px;
 	margin-top: 8px;
 }
 /* *** */
@@ -203,7 +203,7 @@ section.perfil-container .texto-perfil p{
 /* videos */
 
 section.videos{
-	padding: 50px 0;
+	padding: 70px 0 50px 0;
 }
 
 section.videos .box-video{
@@ -338,7 +338,7 @@ section.depoimentos .depoimento-single{
 	float: left;
 	width: calc(100% / 9);
 	padding-top: calc(100% / 9);
-	background-color: blue;
+	background-color: #ccc;
 	border: 6px solid white;
 }
 
@@ -367,6 +367,7 @@ section.depoimentos .depoimento-single{
 
 section.contato{
 	padding: 60px 2%;
+	background-color: rgb(230, 230, 230);
 }
 
 section.contato > h2{

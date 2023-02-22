@@ -430,6 +430,36 @@ section.contato form{
 
 /* *** */
 
+/* Footer */
+
+footer{
+	padding: 40px 2%;
+	background-color: #688293;
+}
+
+footer .container{
+	max-width: 900px;
+}
+
+footer .footer-block{
+	float: left;
+	width: 33.3%;
+}
+
+.footer-block h2{
+	color: white;
+	font-weight: normal;
+	font-size: 18px;
+}
+
+.footer-block p{
+	color: white;
+	font-size: 14px;
+	margin-top: 8px;
+}
+
+/* *** */
+
 /* parte do responsivo */
 
 @media screen and (max-width: 1024px){
@@ -521,6 +551,16 @@ section.contato form{
 
 	.mosaico-social > div:nth-of-type(1n+4){
 		display: none;
+	}
+
+	footer{
+		text-align: center;
+	}
+
+	footer .footer-block{
+		float: none;
+		width: 100%;
+		margin: 30px 0;
 	}
 }
 

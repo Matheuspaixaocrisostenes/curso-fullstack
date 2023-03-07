@@ -2,6 +2,7 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+	font-family: 'Oswald', sans-serif;
 }
 
 body, html{
@@ -43,6 +44,7 @@ header nav.desktop ul li{
 	float: left;
 	font-size: 23px;
 	padding: 0 30px;
+	font-style: italic;
 }
 
 header nav.desktop a{
@@ -54,9 +56,7 @@ header nav.desktop a{
 /* banner */
 section.banner{
 	width: 100%;
-	height: 100vw;
-	min-height: 600px;
-	max-height: 800px;
+	height: 600px;
 	background-color: black;
 	background-image: url('../imagens/bg.jpg');
 	background-size: contain;
@@ -64,15 +64,80 @@ section.banner{
 	background-repeat: no-repeat;
 }
 
+.text-banner{
+	padding: 100px;
+}
+
+.text-banner-single{
+	margin-top: 20px;
+	width: 314px;
+	height: 50px;
+	padding: 12px 30px;
+	text-transform: uppercase;
+	background-image: url('../imagens/box-text.png');
+	background-size: 100% 100%;
+	color: white;
+	font-size: 23px;
+	font-style: italic;
+}
+
+.text-banner .text-banner-single:nth-of-type(2){
+	width: 200px;
+	position: relative;
+	left: -10px;
+	height: 50px;
+}
+
+.text-banner .text-banner-single:nth-of-type(3){
+	width: 170px;
+	position: relative;
+	left: -20px;
+	height: 50px;
+}
+
+.text-banner .text-banner-single:nth-of-type(4){
+	width: 320px;
+	height: 50px;
+	font-size: 21px;
+	color: black;
+	position: relative;
+	left: -30px;	
+	background-image: url('../imagens/box-white-text.png');
+}
+
 /* *** */
 
 /* Responsivo */
 
-@media screen and (max-width: 768px) {
+@media  screen and (max-width: 1400px) {
 	section.banner{
+		background-size: 90% auto;
+		background-position: 200% 100%;
+	}
+}
+
+@media screen and (max-width: 1024px) {
+	section.banner{
+		background-size: cover;
+		background-position: center;
 		height: 70vw;
-		min-height: 0;
-		max-height: 800px;
+		min-height: 500px;
+	}
+}
+
+@media screen and (max-width: 720px){
+	nav.desktop{
+		display: none;
+	}
+}
+
+@media screen and (max-width:580px){
+	.text-banner{
+		padding: 30px;
+	}
+
+	.text-banner-single{
+		font-size: 18px;
 	}
 }
 

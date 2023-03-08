@@ -142,6 +142,40 @@ section.banner{
 
 /* *** */
 
+/* veiculos */
+
+section.veiculos-destaque{
+	padding: 90px 2%;
+}
+
+.line-titulo{
+	max-width: 800px;
+	margin: 0 auto;
+	position: relative;
+	text-align: center;
+}
+
+.ln1{
+	position: absolute;
+	height: 2px;
+	top: 20px;
+	width: 100%;
+	background-color: black;
+}
+
+section.veiculos-destaque h2{
+	position: relative;
+	background-color: white;
+	display: inline-block;
+	text-align: center;
+	font-size: 27px;
+	padding: 0 20px;
+	font-style: italic;
+	text-transform: uppercase;
+}
+
+/* ** */
+
 /* Responsivo */
 
 @media  screen and (max-width: 1400px) {

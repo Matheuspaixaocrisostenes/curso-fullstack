@@ -211,7 +211,6 @@ section.veiculos-destaque .line-titulo h2{
 	color: white;
 	font-size: 16px;
 	font-style: italic;
-	font-weight: bold;
 	width: 150px;
 	margin-top: 10px;
 	text-align: center;
@@ -274,6 +273,35 @@ section.veiculos-destaque .line-titulo h2{
 	.text-banner-single{
 		font-size: 18px;
 	}
+
+	.text-banner .text-banner-single:nth-of-type(4){
+		width: 270px;
+	}
+
+	section.veiculos-destaque .line-titulo h2{
+		font-size: 23px;
+	}
+
+	section.veiculos-destaque .container{
+		text-align: center;
+	}
+
+	.vitrine-destaque{
+		display: inline-block;
+		float: none;
+		width: 80%;
+		margin-top: 20px;
+	}
+
+	.vitrine-destaque a{
+		display: inline-block;
+	}
+}
+
+@media screen and (max-width: 480px){
+	.vitrine-destaque {
+		width: 100%;
+	}	
 }
 
 /* *** */

@@ -402,6 +402,15 @@ footer p{
 
 /* *** */
 
+/* Pagina de venda */
+
+section.venda{
+	padding: 90px 0;
+	min-height: 90%;
+}
+
+/* *** */
+
 /* Responsivo */
 
 @media  screen and (max-width: 1400px) {

@@ -409,6 +409,41 @@ section.venda{
 	min-height: 90%;
 }
 
+.content-venda{
+	margin-top: 40px;
+}
+
+.sidebar{
+	float: left;
+	width: 30%;
+}
+
+.search1 h2{
+	font-size: 24px;
+	color: black;
+	font-weight: normal;
+}
+
+.search1 .barra-preco{
+	width: 300px;
+	height: 20px;
+	background-color: whiteq;
+	border: 1px solid #ccc;
+	margin-top: 8px;
+	border-radius: 20px;
+	position: relative;
+}
+
+.barra-preco-fill{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 30%;
+	height: 20px;
+	border-radius: 20px;
+	background-color: rgb(200, 200, 200);
+}
+
 /* *** */
 
 /* Responsivo */

@@ -1,0 +1,16 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    height: 100%;
+}
+
+.box{
+   width: 500px;
+   margin: 30px;
+   padding: 30px;
+   background-color: #ccc;
+}

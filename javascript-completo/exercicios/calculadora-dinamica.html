@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        var numero1 = prompt('informe o primeiro numero: ')
+        var sinal = prompt('informe o sinal da sua operação: ')
+
+        while(sinal != '+' && sinal != '-' && sinal != '*' && sinal != '/'){
+            alert('Por favor informe um sinal valido!!')
+            sinal = prompt('informe o sinal da sua operação: ')
+        }
+        var numeroFinal = prompt('informe o numero final: ')
+
+        var resultadoFinal = 0;
+
+        numero1 =  parseInt(numero1)
+        numeroFinal = parseInt(numeroFinal)
+
+        if(sinal == '+'){
+            resultadoFinal = numero1 + numeroFinal
+        }else if(sinal = '-'){
+            resultadoFinal = numero1 - numeroFinal
+        }else if(sinal = '*'){
+            resultadoFinal = numero1 * numeroFinal
+        }else if(sinal = '/'){
+            resultadoFinal = numero1 / numeroFinal
+        }
+
+        alert(`o resultado final é: ${resultadoFinal} `)
+    </script>
+</body>
+</html>

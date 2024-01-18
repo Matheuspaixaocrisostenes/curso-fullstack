@@ -15,12 +15,37 @@
             this.printNome = function(){
                 alert(this.nome)
             }
+            this.returnAnimal = function(animal){
+                return animal
+            }
         }
 
-        function animal(){
-            this.nome = 'Cachorro'
-            this.peso = '12Kg'
+        
+        function Animal(nome,peso){
+            if(nome == undefined){
+                nome = 'Cachorro'
+            }
+            
+            if(peso == undefined){
+                peso = '5Kg'
+            }
+            this.nome = nome
+            this.peso = peso
         }
+        
+        animal = new Animal()
+        // alert(animal.nome)
+        
+        var pessoa = new Pessoa()
+
+        var animal = new Animal
+
+        alert(pessoa.returnAnimal(animal).nome)
+
+        // animal = new Animal('cachorro', '12Kg')
+        // animal2 = new Animal('gato', '6Kg')
+        // alert(animal.nome)
+        // alert(animal2.peso)
 
         // var pessoa = new Pessoa()
         // var pessoa_2 = new Pessoa()

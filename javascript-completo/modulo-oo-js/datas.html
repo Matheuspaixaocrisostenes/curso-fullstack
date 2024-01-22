@@ -7,12 +7,20 @@
 </head>
 <body>
     <script>
-        var date = new Date()
+        // var date = new Date()
         // alert(date.getDate())
         // alert(date.getDay())
         // alert(date.getFullYear())
         // alert(date.getHours())
-        alert(date.getMinutes())
+        // alert(date.getMinutes())
+
+        var date = new Date('11/08/2020')
+        // alert(date.getDate())
+
+        var date2 = new Date('11/10/2020')
+        
+        var diferenca = (date2.getTime() - date.getTime()) / (1000 * 3600 * 24)
+        alert(diferenca)
     </script>
 </body>
 </html>

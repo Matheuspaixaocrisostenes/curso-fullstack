@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        .box{
+        /* .box{
             width: 200px;
             height: 200px;
             background-color: red;
@@ -17,20 +17,52 @@
             margin-left: 90px;
             margin-top: 20px;
             background-color: green;
+        } */
+
+        .conteudo h2 span{
+            cursor: pointer;
+            font-size: 13px;
+        }
+
+        .conteudo p {
+            height: 10px;
+            overflow: hidden;
+            transition: 1s;
+        }
+
+        .mostrar{
+            height: 200px !important;
         }
     </style>
 </head>
 <body>
-    <div class="box"></div>
+    <!-- <div class="box"></div> -->
+    <div class="conteudo">
+        <h2>Titulo do Conteúdo <span>Ver Mais!</span></h2>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Exercitationem labore sit quasi doloremque natus, temporibus impedit. Atque similique inventore sint illo hic. Debitis corrupti tempore perspiciatis tenetur accusamus saepe repudiandae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat rem adipisci sed velit optio, tempora vitae inventore enim ab cumque illum non perferendis culpa? Eveniet nam in molestias rem voluptates. Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit magni, illo voluptatum doloremque ullam vero deleniti nulla illum nesciunt asperiores sapiente tempora ab dolore nihil laborum repellendus culpa veniam molestias? Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi quibusdam, ipsam quis veniam impedit neque corrupti placeat aliquid exercitationem beatae saepe! Unde placeat illum praesentium ipsum rem, facere iusto animi!</p>
+    </div>
     <script>
 
-        var box = document.querySelectorAll('.box')[0]
-        // setTimeout(() => {
-        //     box.classList.add('animEsquerda')
-        // }, 1000)
+        // var box = document.querySelectorAll('.box')[0]
+        // // setTimeout(() => {
+        // //     box.classList.add('animEsquerda')
+        // // }, 1000)
 
-        box.addEventListener('click', () => {
-            box.classList.add('animEsquerda')
+        // box.addEventListener('click', () => {
+        //     box.classList.add('animEsquerda')
+        // })
+
+        var span = document.querySelector('.conteudo span')
+
+        span.addEventListener('click', ()=>{
+            var conteudo = document.querySelector('.conteudo p')
+            if(conteudo.classList.contains('mostrar')){
+                span.innerHTML = 'Ver Mais!'
+                conteudo.classList.remove('mostrar')
+            }else{
+                span.innerHTML = 'Ocultar'
+                conteudo.classList.add('mostrar')
+            }
         })
     </script>
 </body>

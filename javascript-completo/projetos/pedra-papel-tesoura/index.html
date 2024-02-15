@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .player-options img,
+        .enemy-options img{
+            max-width: 200px;
+            opacity: 0.3;
+            cursor: pointer;
+        }
+
+        .align{
+            display: flex;
+            justify-content: space-evenly;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;">Pedra, Papel ou Tesoura</h1>
+    <hr>
+
+    <div class="align">
+        <div class="player-options">
+            <div><img opt="rock" src="rock.png" alt="pedra"></div>
+            <div><img opt="paper" src="paper.png" alt="Papel"></div>
+            <div><img opt="scisor" src="scisor.png" alt="Tesoura"></div>
+        </div>
+        <div class="enemy-options">
+            <div><img src="rock.png" alt="pedra"></div>
+            <div><img src="paper.png" alt="Papel"></div>
+            <div><img src="scisor.png" alt="Tesoura"></div>
+        </div>
+    </div>
+
+    <script>
+        var elementos = document.querySelectorAll('.player-options div > img')
+        var playerOpt = ""
+
+        function resetOpacityPlayer(){
+            for(var i = 0; i < elementos.length; i++){
+                elementos[i].style.opacity = 0.3
+            }
+        }
+
+        for(var i = 0; i < elementos.length; i++){
+            elementos[i].addEventListener('click', (t) => {
+                resetOpacityPlayer()
+                t.target.style.opacity = 1
+                playerOpt = t.target.getAttribute('opt')
+                alert(playerOpt)
+            })
+        }
+    </script>
+</body>
+</html>

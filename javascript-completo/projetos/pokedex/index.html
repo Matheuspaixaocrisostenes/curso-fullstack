@@ -9,40 +9,23 @@
 <body>
     <div class="main">
         <h2>Pokedex</h2>
-
-        <div class="pokemon-boxes">
-
-            <div class="pokemon-box">
-                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/132.png">
-                <p>Ditto</p>
-            </div>
-            <div class="pokemon-box">
-                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/132.png">
-                <p>Ditto</p>
-            </div>
-            <div class="pokemon-box">
-                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/132.png">
-                <p>Ditto</p>
-            </div>
-            <div class="pokemon-box">
-                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/132.png">
-                <p>Ditto</p>
-            </div>
-            <div class="pokemon-box">
-                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/132.png">
-                <p>Ditto</p>
-            </div>
-            <div class="pokemon-box">
-                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/132.png">
-                <p>Ditto</p>
-            </div>
-
-        </div>
+        <br>
+        <input id="quantidade" style="width: 100%; height: 40px; padding-left: 10px;" type="text" name="quantidade" placeholder="Insira a quantidade de pokemons">
+        <div class="pokemon-boxes"></div>
 
     </div>
 
     <script>
-        fetch('https://pokeapi.co/api/v2/pokemon?limit=10')
+
+        var quantidade = document.getElementById('quantidade')
+        quantidade.addEventListener('keyup', () =>{
+            pegaPokemons(quantidade.value)
+        })
+
+        pegaPokemons(2)
+
+        function pegaPokemons(quantidade){
+            fetch('https://pokeapi.co/api/v2/pokemon?limit='+quantidade)
         .then(response => response.json())
         .then(allpokemon => {
             var pokemons = []
@@ -56,9 +39,21 @@
                     
                     pokemons.push({nome: val.name, imagem: pokemonSingle.sprites.front_default})
 
-                    if(pokemons.length == 10){
+                    if(pokemons.length == quantidade){
                         // finalizamos nossas requisições
-                        console.log(pokemons);
+                        // console.log(pokemons);
+
+                        var pokemonBoxes =  document.querySelector('.pokemon-boxes')
+                        pokemonBoxes.innerHTML = ""
+
+                        pokemons.map(function(val){
+                            pokemonBoxes.innerHTML += `
+                                <div class="pokemon-box">
+                                    <img src="${val.imagem}">
+                                    <p>${val.nome}</p>
+                                </div>
+                            `
+                        })
                     }
                 })            
             })
@@ -67,6 +62,7 @@
                 console.log(val.nome);
             })
         })
+        }
     </script>
 </body>
 </html>

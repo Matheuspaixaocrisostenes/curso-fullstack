@@ -27,14 +27,29 @@
 
     <form class="pergunta">
         <span>Opção 1</span>
-        <input type="radio" name="pergunta1" value="correta">
+        <input type="radio" name="pergunta2" value="correta">
         <br>
         <span>Opção 2</span>
-        <input type="radio" name="pergunta1" value="incorreta">
+        <input type="radio" name="pergunta2" value="incorreta">
         <br>
         <span>Opção 3</span>
-        <input type="radio" name="pergunta1" value="incorreta">
+        <input type="radio" name="pergunta2" value="incorreta">
         <br>
     </form>
+
+    <script>
+        var elementos = document.querySelectorAll('[type=radio]')
+
+        for(var i = 0; i < elementos.length; i++){
+            elementos[i].addEventListener('change', function(e){
+                let marcado = e.target.value
+                if(marcado == 'correta'){
+                    let el = e.target.previousElementSibling.style.backgroundColor = 'green'
+                }else if(marcado == 'incorreta'){
+                    let el = e.target.previousElementSibling.style.backgroundColor = 'red'
+                }
+            })
+        }
+    </script>
 </body>
 </html>

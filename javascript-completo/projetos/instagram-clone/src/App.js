@@ -22,7 +22,9 @@ function App() {
 
         {
           (user)?
-          <div>Olá Guilherme</div>
+          <div className='header_loginInfo'>
+            Olá Guilherme
+          </div>
           :
           <div className='header_loginForm'>
           <form>
@@ -30,6 +32,9 @@ function App() {
             <input type='password' placeholder='senha' />
             <input type='submit' name='acao' value='Logar' />
           </form>
+          <div className='btn_criarConta'>
+            <a href='#'>Criar Conta</a>
+          </div>
         </div>
         }
 

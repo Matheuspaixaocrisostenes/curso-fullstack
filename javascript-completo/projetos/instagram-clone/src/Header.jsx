@@ -4,11 +4,29 @@ import logo from './logo.png'
 function Header(props){
     
     useEffect(() => {
-        props.setUser('João')
+        
     }, [])
 
+    function AbrirModalCriarConta(e){
+      e.preventDefault()
+      alert('criar conta')
+    }
+
     return(
+
         <div className='header'>
+
+        <div className='modalCriarConta'>
+          <div className='formCriarConta'>
+            <form>
+              <h2>Criar Conta</h2>
+              <input type='text' placeholder='Seu Email' />
+              <input type='text' placeholder='Username' />
+              <input type='password' placeholder='Sua Senha' />
+            </form>
+          </div>
+        </div>
+
         <div className='center'>
         <div className='header_logo'>
           <a href='#'><img src={logo} /></a>
@@ -29,7 +47,7 @@ function Header(props){
             <input type='submit' name='acao' value='Logar' />
           </form>
           <div className='btn_criarConta'>
-            <a href='#'>Criar Conta</a>
+            <a onClick={(e) => AbrirModalCriarConta(e)} href='#'>Criar Conta</a>
           </div>
         </div>
         }

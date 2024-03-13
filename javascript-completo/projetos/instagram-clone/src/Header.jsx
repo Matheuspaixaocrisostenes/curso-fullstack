@@ -9,7 +9,14 @@ function Header(props){
 
     function AbrirModalCriarConta(e){
       e.preventDefault()
-      alert('criar conta')
+      
+      let modal = document.querySelector('.modalCriarConta')
+      modal.style.display = 'block'
+    }
+
+    function fecharModalCriar(){
+      let modal = document.querySelector('.modalCriarConta')
+      modal.style.display = 'none'
     }
 
     return(
@@ -18,11 +25,13 @@ function Header(props){
 
         <div className='modalCriarConta'>
           <div className='formCriarConta'>
-            <form>
+            <div className='close-modal-criar' onClick={() => fecharModalCriar()}>X</div>
               <h2>Criar Conta</h2>
+            <form>
               <input type='text' placeholder='Seu Email' />
               <input type='text' placeholder='Username' />
               <input type='password' placeholder='Sua Senha' />
+              <input type='submit' value="criar conta" /> 
             </form>
           </div>
         </div>

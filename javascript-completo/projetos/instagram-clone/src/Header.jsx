@@ -7,6 +7,11 @@ function Header(props){
         
     }, [])
 
+    function criarConta(e){
+      alert('Conta Criada')
+      e.preventDefault()
+    }
+
     function AbrirModalCriarConta(e){
       e.preventDefault()
       
@@ -27,7 +32,7 @@ function Header(props){
           <div className='formCriarConta'>
             <div className='close-modal-criar' onClick={() => fecharModalCriar()}>X</div>
               <h2>Criar Conta</h2>
-            <form>
+            <form onSubmit={(e) => criarConta(e)}>
               <input type='text' placeholder='Seu Email' />
               <input type='text' placeholder='Username' />
               <input type='password' placeholder='Sua Senha' />

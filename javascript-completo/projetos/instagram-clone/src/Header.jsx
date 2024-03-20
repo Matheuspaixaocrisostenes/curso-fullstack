@@ -29,6 +29,19 @@ function Header(props){
         })
     }
 
+    function logar(e){
+      e.preventDefault()
+      let email = document.getElementById('email-login').value
+      let senha = document.getElementById('senha-login').value
+      auth.signInWithEmailAndPassword(email,senha)
+        .then((auth) => {
+          props.setUser(auth.user.displayName)
+          alert('logado com sucesso')
+        }).catch((err) => {
+          alert(err.message)
+        })
+    }
+
     function AbrirModalCriarConta(e){
       e.preventDefault()
       
@@ -72,9 +85,9 @@ function Header(props){
           </div>
           :
           <div className='header_loginForm'>
-          <form>
-            <input type='text' placeholder='login' />
-            <input type='password' placeholder='senha' />
+          <form onSubmit={(e) => logar(e)}>
+            <input id='email-login' type='text' placeholder='login' />
+            <input id='senha-login' type='password' placeholder='senha' />
             <input type='submit' name='acao' value='Logar' />
           </form>
           <div className='btn_criarConta'>

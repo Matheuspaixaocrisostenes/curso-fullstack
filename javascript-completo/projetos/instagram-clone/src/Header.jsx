@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import logo from './logo.png'
-import { auth } from './firebase.js'
+import { auth, storage, db } from './firebase.js'
 
 function Header(props){
     
@@ -75,7 +75,7 @@ function Header(props){
       let tituloPost = document.getElementById('titulo-upload').value
       let progressEl = document.getElementById('progress-upload')
 
-      alert(tituloPost)
+      const uploadTask = storage.ref(`images/${file.name}`).put(file)
     }
 
     return(

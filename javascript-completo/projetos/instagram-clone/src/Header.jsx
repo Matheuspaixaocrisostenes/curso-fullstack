@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import logo from './logo.png'
+import firebase  from 'firebase'
 import { auth, storage, db } from './firebase.js'
 
 function Header(props){
@@ -76,6 +77,29 @@ function Header(props){
       let progressEl = document.getElementById('progress-upload')
 
       const uploadTask = storage.ref(`images/${file.name}`).put(file)
+      uploadTask.on("state_changed", function(snapshot){
+        const progress = Math.round(snapshot.bytesTransferred / snapshot.totalBytes) * 100
+        setProgress(progress)
+      }, function(error){
+
+      }, function(){
+        storage.ref('images').child(file.name).getDownloadURL()
+          .then(function(url){
+            db.collection('post').add({
+              titulo: tituloPost,
+              image: url,
+              userName: props.user,
+              timestamp: firebase.firestore.FieldValue.serverTimestamp()
+            })
+
+            setProgress(0)
+            setFile(null)
+
+            alert('Upload Realizado com sucesso!')
+
+            document.getElementById('form-upload').reset()
+          })
+      })
     }
 
     return(
@@ -99,7 +123,7 @@ function Header(props){
           <div className='formUpload'>
             <div className='close-modal-criar' onClick={() => fecharModalUpload()}>X</div>
               <h2>Fazer Upload</h2>
-            <form onSubmit={(e) => uploadPost(e)}>
+            <form id='form-upload' onSubmit={(e) => uploadPost(e)}>
               <progress id='progress-upload' value={progress}></progress>
               <input id='titulo-upload' type='text' placeholder='Nome da sua foto...' />
               <input onChange={(e) => setFile(e.target.files[0])} type="file" name='file' />

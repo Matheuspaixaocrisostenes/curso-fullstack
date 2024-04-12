@@ -6,6 +6,12 @@
     <title>Document</title>
 </head>
 <body>
-    <h2>Olá <%= nome %></h2>
+    <div class="tarefas">
+        <% for(let i = 0; i < tarefasList.length; i++){ %>
+
+            <p><%= tarefasList[i] %></p>
+
+        <% } %>
+    </div>
 </body>
 </html>
